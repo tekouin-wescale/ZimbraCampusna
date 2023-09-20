@@ -22,7 +22,7 @@ docker pull campusnaa/zimbra
 Now that we have an image called campusnaa/zimbra, we can do a docker run with some special parameters, like this:
 
 ```bash
-docker run -p 25:25 -p 80:80 -p 465:465 -p 587:587 -p 110:110 -p 143:143 -p 993:993 -p 995:995 -p 443:443 -p 8080:8080 -p 8443:8443 -p 7071:7071 -p 9071:9071 -h zimbra-docker.zimbra.io --dns 127.0.0.1 --dns 8.8.8.8 -i -t -e PASSWORD=Zimbra2017 campusnaa/zimbra
+docker run -p 25:25 -p 80:80 -p 465:465 -p 587:587 -p 110:110 -p 143:143 -p 993:993 -p 995:995 -p 443:443 -p 8080:8080 -p 8443:8443 -p 7071:7071 -p 9071:9071 -h zimbra-docker.zimbra.io --dns 127.0.0.1 --dns 8.8.8.8 -i -t -e PASSWORD=Zimbra2017 campusnaa/zimbra:latest
 ```
 
 As you can see we tell the container the ports we want to expose, and on which port, we also specify the container hostname, the password for the Zimbra Administrator Account, and the image to use.
@@ -81,7 +81,7 @@ docker run -p PORTS -h HOSTNAME.DOMAIN --dns DNS_SERVER -i -t -e PASSWORD=YOUR_P
 Example:
 
 ```bash
-docker run -p 25:25 -p 80:80 -p 465:465 -p 587:587 -p 110:110 -p 143:143 -p 993:993 -p 995:995 -p 443:443 -p 8080:8080 -p 8443:8443 -p 7071:7071 -p 9071:9071 -h zimbra-docker.zimbra.io --dns 127.0.0.1 --dns 8.8.8.8 -i -t -e PASSWORD=Zimbra2017 Campusnazimbra
+docker run -p 25:25 -p 80:80 -p 465:465 -p 587:587 -p 110:110 -p 143:143 -p 993:993 -p 995:995 -p 443:443 -p 8080:8080 -p 8443:8443 -p 7071:7071 -p 9071:9071 -h zimbra-docker.zimbra.io --dns 127.0.0.1 --dns 8.8.8.8 -i -t -e PASSWORD=Zimbra2017 campusnaa/zimbra:latest
 ```
 
 This will create the container in few seconds, and run automatically the start.sh:

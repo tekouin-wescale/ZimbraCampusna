@@ -1,4 +1,4 @@
-IMAGE=zimbra_docker
+IMAGE=campusnaa/zimbra:latest
 
 .PHONY: all build
 
