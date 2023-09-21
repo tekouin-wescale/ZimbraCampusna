@@ -127,10 +127,10 @@ zimbra_server_hostname="$HOSTNAME.$DOMAIN"
 INSTALL_PACKAGES="zimbra-core zimbra-ldap zimbra-logger zimbra-mta zimbra-snmp zimbra-store zimbra-apache zimbra-spell zimbra-memcached zimbra-proxy"
 EOF
 ##Install the Zimbra Collaboration ##
-echo "Downloading Zimbra Collaboration 10.0.0"
-wget -O /opt/zimbra-install/zimbra-zcs-10.0.0.tar.gz https://files.zimbra.com/downloads/10.0.0_GA/zcs-NETWORK-10.0.0_GA_4518.UBUNTU20_64.20230301065514.tgz
+echo "Downloading Zimbra Collaboration 8.8.15"
+wget -O /opt/zimbra-install/zimbra-zcs-8.8.15.tar.gz https://files.zimbra.com/downloads/8.8.15_GA/zcs-8.8.15_GA_4179.UBUNTU20_64.20211118033954.tgz
 echo "Extracting files from the archive"
-tar xzvf /opt/zimbra-install/zimbra-zcs-10.0.0.tar.gz -C /opt/zimbra-install/
+tar xzvf /opt/zimbra-install/zimbra-zcs-8.8.15.tar.gz -C /opt/zimbra-install/
 
 echo "Update package cache"
 apt update
